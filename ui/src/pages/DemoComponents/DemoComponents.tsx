@@ -11,6 +11,7 @@ import DemoCalendar from "src/components/Examples/DemoCalendar";
 import { DialogDemo } from "src/components/Examples/DemoDialog";
 import { DialogCloseButton } from "src/components/Examples/DemoDialogShare";
 import DialogMenuDemo from "src/components/Examples/DemoDialogMenu";
+import DemoChart from "src/components/Examples/DemoChart";
 
 const DemoComponents: React.FC = () => {
   return (
@@ -48,6 +49,10 @@ const DemoComponents: React.FC = () => {
 
       <Accordion triggerText="Calendário">
         <DemoCalendar />
+      </Accordion>
+
+      <Accordion triggerText="Gráfico">
+        <DemoChart />
       </Accordion>
     </div>
   );
