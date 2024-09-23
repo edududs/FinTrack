@@ -71,6 +71,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "theme-transition": "theme-transition 3s ease-in-out",
       },
+      dropShadow: {
+        custom: "2px 2px 3px rgba(0, 0, 0, 0.5)", // Adiciona um drop-shadow customizado
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
