@@ -1,9 +1,12 @@
-import BasicModal, { BasicModalProps } from "../../../Modal/Base/Modal";
-import Button from "../../../Button";
-import { Input } from "../../../Input";
+import BasicModal, { BasicModalProps } from "../../../core/Modal/Base/Modal";
+import Button from "../../../core/Button";
+import { Input } from "../../../core/Input";
 
-const ModalBaseDemo: React.FC<BasicModalProps> = ({isOpen, onClose, setIsOpen}) => {
-
+const ModalBaseDemo: React.FC<BasicModalProps> = ({
+  isOpen,
+  onClose,
+  setIsOpen,
+}) => {
   const handleCancel = () => {
     console.log("Cancelled");
     if (setIsOpen) setIsOpen(false);

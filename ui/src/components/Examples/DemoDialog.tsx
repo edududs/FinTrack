@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../core/Button";
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../Dialog";
-import { Input } from "../Input";
-import { Label } from "../Label";
+} from "../core/Dialog";
+import { Input } from "../core/Input";
+import { Label } from "../core/Label";
 
 export const DialogDemo: React.FC<{ className?: string }> = ({ className }) => {
   return (

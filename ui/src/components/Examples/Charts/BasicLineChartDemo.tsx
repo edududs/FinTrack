@@ -5,7 +5,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "src/components/Chart";
+} from "src/components/core/Chart";
 
 interface BasicBarChartDemoProps {
   chartConfig?: any;

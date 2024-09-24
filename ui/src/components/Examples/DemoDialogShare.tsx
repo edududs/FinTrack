@@ -1,5 +1,5 @@
 import { Copy } from "lucide-react";
-import Button from "../Button";
+import Button from "../core/Button";
 import {
   Dialog,
   DialogClose,
@@ -9,11 +9,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../Dialog";
-import { Input } from "../Input";
-import { Label } from "../Label";
+} from "../core/Dialog";
+import { Input } from "../core/Input";
+import { Label } from "../core/Label";
 
-export const DialogCloseButton: React.FC<{ className?: string }> = ({ className }) => {
+export const DialogCloseButton: React.FC<{ className?: string }> = ({
+  className,
+}) => {
   return (
     <Dialog>
       <DialogTrigger asChild className="w-full">
@@ -52,4 +54,4 @@ export const DialogCloseButton: React.FC<{ className?: string }> = ({ className 
       </DialogContent>
     </Dialog>
   );
-}
+};

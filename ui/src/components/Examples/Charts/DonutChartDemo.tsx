@@ -7,7 +7,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
-import { renderActiveShapeDonut } from "src/components/Chart/renders";
+import { renderActiveShapeDonut } from "src/components/core/Chart/renders";
 
 // Dados de exemplo para o gráfico de pizza
 const dataPieChart = [

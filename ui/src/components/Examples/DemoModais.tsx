@@ -1,8 +1,7 @@
 import React from "react";
-import Accordion from "../Accordion";
+import Accordion from "../core/Accordion";
 import DemoConfirmationModal from "./Modals/DemoConfirmationModal";
 import { DemoModal } from "./Modals/DemoModals";
-
 
 const AccordionModais: React.FC = () => {
   return (
@@ -15,6 +14,6 @@ const AccordionModais: React.FC = () => {
       </Accordion>
     </>
   );
-}
+};
 
 export default AccordionModais;

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { PieChart, Pie, Legend, ResponsiveContainer, Cell } from "recharts";
-import { renderActiveShape } from "src/components/Chart/renders";
+import { renderActiveShape } from "src/components/core/Chart/renders";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "src/components/Chart";
+} from "src/components/core/Chart";
 
 const data = [
   { name: "Group A", value: 400, color: "#0088FE" },

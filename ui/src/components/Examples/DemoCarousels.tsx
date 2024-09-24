@@ -1,5 +1,5 @@
-import { Label } from "../Label";
-import Separator from "../Separator";
+import { Label } from "../core/Label";
+import Separator from "../core/Separator";
 import {
   SimpleCarousel,
   CarouselSpacing,

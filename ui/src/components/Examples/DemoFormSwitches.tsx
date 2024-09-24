@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { useToast } from "../../../src/hooks/use-toast";
-import Button from "../Button";
-import Form from "../Forms";
-import { Switch } from "../Switch";
+import Button from "../core/Button";
+import Form from "../core/Forms";
+import { Switch } from "../core/Switch";
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),
@@ -30,10 +30,10 @@ export const DemoFormSwitches: React.FC = () => {
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
-        ),
+      ),
       timeout: 5000,
     });
-  }
+  };
 
   return (
     <Form.Form {...form}>
@@ -93,4 +93,4 @@ export const DemoFormSwitches: React.FC = () => {
       </form>
     </Form.Form>
   );
-}
+};

@@ -1,5 +1,5 @@
-import { ConfirmationModal } from "../../../Modal";
-import { ConfirmationModalProps } from "../../../Modal";
+import { ConfirmationModal } from "../../../core/Modal";
+import { ConfirmationModalProps } from "../../../core/Modal";
 
 const ModalConfirmDemo: React.FC<ConfirmationModalProps> = ({
   isOpen = false,

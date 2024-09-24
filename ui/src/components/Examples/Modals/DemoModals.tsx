@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ModalBaseDemo from "./CoreComponents/BaseModal";
 import ModalConfirmDemo from "./CoreComponents/ConfirmationModal";
-import Button from "../../Button";
+import Button from "../../core/Button";
 
 export const DemoModal: React.FC<{ className?: string }> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,5 +51,3 @@ export const DemoConfirmationModal: React.FC = ({}) => {
     </>
   );
 };
-
-

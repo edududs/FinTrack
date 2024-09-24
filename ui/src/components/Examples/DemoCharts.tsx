@@ -5,7 +5,7 @@ import {
   ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
-} from "../Chart/Chart";
+} from "../core/Chart/Chart";
 import {
   Bar,
   CartesianGrid,
@@ -19,11 +19,11 @@ import {
   YAxis,
   PieLabelRenderProps,
 } from "recharts";
-import Separator from "../Separator";
+import Separator from "../core/Separator";
 import MyPieChart from "./Charts/MyPieChart";
 import DonutChartDemo from "./Charts/DonutChartDemo";
 import BasicBarChartDemo from "./Charts/BasicBarChartDemo";
-import { Label } from "../Label";
+import { Label } from "../core/Label";
 import BasicLineChartDemo from "./Charts/BasicLineChartDemo";
 
 export const chartData = [

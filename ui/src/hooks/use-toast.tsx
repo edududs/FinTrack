@@ -3,7 +3,10 @@
 // Inspired by react-hot-toast library
 import * as React from "react";
 
-import type { ToastActionElement, ToastProps } from "../components/Toast/Toast";
+import type {
+  ToastActionElement,
+  ToastProps,
+} from "../components/core/Toast/Toast";
 
 const TOAST_LIMIT = 20;
 const TOAST_REMOVE_DELAY = 3000;
@@ -158,8 +161,7 @@ function toast({ timeout = TOAST_REMOVE_DELAY, ...props }: Toast) {
     timeout, // Aqui você adiciona o timeout ao objeto de ação
   });
 
-  const dismiss = (id: any) =>
-    dispatch({ type: "DISMISS_TOAST", toastId: id });
+  const dismiss = (id: any) => dispatch({ type: "DISMISS_TOAST", toastId: id });
 
   return {
     id,

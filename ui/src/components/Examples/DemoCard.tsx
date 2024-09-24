@@ -1,6 +1,6 @@
 import { BellRing, Check } from "lucide-react";
 import { cn } from "src/lib/utils";
-import Button from "../Button";
+import Button from "../core/Button";
 import {
   Card,
   CardContent,
@@ -8,15 +8,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../Card";
-import { Switch } from "../Switch";
+} from "../core/Card";
+import { Switch } from "../core/Switch";
 import { useState } from "react";
 import { useToast } from "src/hooks/use-toast";
 import { z } from "zod";
-import Form from "../Forms";
+import Form from "../core/Forms";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { AccordionTrigger } from "../Accordion";
+import { AccordionTrigger } from "../core/Accordion";
 
 const formSchema = z.object({
   pushNotifications: z.boolean().default(false),
@@ -47,9 +47,8 @@ export function CardDemo({ className, ...props }: CardProps) {
   const { toast } = useToast();
 
   const testTest = (e: any) => {
-
     console.log("Test test", e);
-  }
+  };
 
   const onSwitchCheckChange = (value: any) => {
     setValueSwitch(value);
@@ -124,7 +123,11 @@ export function CardDemo({ className, ...props }: CardProps) {
                   </CardContent>
                   <CardFooter>
                     <Form.FormControl>
-                      <Button type="submit" className="w-full" onClick={testTest}>
+                      <Button
+                        type="submit"
+                        className="w-full"
+                        onClick={testTest}
+                      >
                         <Check className="mr-2 h-4 w-4" /> Mark all as read
                       </Button>
                     </Form.FormControl>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartConfig } from "src/components/Chart/Chart";
+import { ChartConfig } from "src/components/core/Chart/Chart";
 
 type ChartContextProps = {
   config?: ChartConfig;

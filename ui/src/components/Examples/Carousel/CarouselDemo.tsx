@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "src/components/Card";
+import { Card, CardContent } from "src/components/core/Card";
 import {
   Carousel,
   CarouselApi,
@@ -7,8 +7,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "src/components/Carousel";
-import { CarouselContainerDemo } from "src/components/Carousel";
+  CarouselContainerDemo,
+} from "src/components/core/Carousel";
 
 export function SimpleCarousel() {
   return (

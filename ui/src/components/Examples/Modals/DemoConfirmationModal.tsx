@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../../Button";
+import Button from "../../core/Button";
 import ModalConfirmDemo from "./CoreComponents/ConfirmationModal";
 
 const DemoConfirmationModal: React.FC = ({}) => {

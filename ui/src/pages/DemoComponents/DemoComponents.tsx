@@ -1,23 +1,27 @@
 import React from "react";
-import Separator from "../../components/Separator";
+import Separator from "../../components/core/Separator";
 import { DemoFormSwitches } from "../../../src/components/Examples/DemoFormSwitches";
-import { ProfileForm } from "../../components/Forms/FormDemo";
-import Accordion from "../../../src/components/Accordion";
+import { ProfileForm } from "../../components/core/Forms/FormDemo";
+import Accordion from "../../components/core/Accordion";
 import ButtonDemoToast from "../../../src/components/Examples/DemoToast";
 import { DemoModal } from "src/components/Examples/Modals/DemoModals";
 import DemoConfirmationModal from "src/components/Examples/Modals/DemoConfirmationModal";
-import DropDownMenuDemo from "src/components/DropdownMenus/DropDownMenuExample";
+import DropDownMenuDemo from "src/components/core/DropdownMenus/DropDownMenuExample";
 import DemoCalendar from "src/components/Examples/DemoCalendar";
 import { DialogDemo } from "src/components/Examples/DemoDialog";
 import { DialogCloseButton } from "src/components/Examples/DemoDialogShare";
 import DialogMenuDemo from "src/components/Examples/DemoDialogMenu";
 import DemoCharts from "src/components/Examples/DemoCharts";
-import { Component as TooltipDemo } from "src/components/Chart/Tooltip/TooltipDemo";
-import { Label } from "src/components/Label";
+import { Component as TooltipDemo } from "src/components/core/Chart/Tooltip/TooltipDemo";
+import { Label } from "src/components/core/Label";
 import CardDemo from "src/components/Examples/DemoCard";
-import { ComboboxForm } from "src/components/ComboBox/ComboBoxForm";
-import { AspectRatioDefault } from "src/components/AspectRatio/AspectRatioDemo";
-import { AvatarImage, Avatar, AvatarFallback } from "src/components/Avatar";
+import { ComboboxForm } from "src/components/core/ComboBox/ComboBoxForm";
+import { AspectRatioDefault } from "src/components/core/AspectRatio/AspectRatioDemo";
+import {
+  AvatarImage,
+  Avatar,
+  AvatarFallback,
+} from "src/components/core/Avatar";
 import DemoCarousels from "src/components/Examples/DemoCarousels";
 
 const DemoComponents: React.FC = () => {
