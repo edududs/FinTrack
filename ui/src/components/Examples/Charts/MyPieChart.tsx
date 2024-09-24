@@ -38,13 +38,19 @@ const MyPieChart: React.FC = () => {
               setActiveIndex(-1);
             }}
             activeShape={renderActiveShape}
+            className="mb-10"
           >
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={entry.color} />
             ))}
           </Pie>
           <ChartTooltip content={<ChartTooltipContent />} />
-          <Legend align="center" verticalAlign="bottom" height={36} />
+          <Legend
+            align="center"
+            verticalAlign="bottom"
+            height={36}
+            className=""
+          />
         </PieChart>
       </ChartContainer>
     </ResponsiveContainer>
