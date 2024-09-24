@@ -41,12 +41,6 @@ const DemoCarousels: React.FC = () => {
         API Controlled Carousel
       </Label>
       <CarouselDApiDemo />
-      {/* <Separator />
-        <VerticalCarousel />
-        <Separator />
-        <OptionsCarousel />
-        <Separator />
-        <ApiControlledCarousel /> */}
     </div>
   );
 };
