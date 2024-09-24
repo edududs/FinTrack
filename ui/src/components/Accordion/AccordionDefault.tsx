@@ -8,10 +8,11 @@ import {
 } from "./AccordionBase";
 
 interface DefaultAccordionProps {
-  triggerText: string; // Texto que aparece no botão do Accordion
-  children: React.ReactNode; // O conteúdo dentro do Accordion
-  collapsible?: boolean; // Define se o Accordion pode colapsar
-  type?: "single" | "multiple"; // Define se é um Accordion de seleção única ou múltipla
+  triggerText: string;
+  children: React.ReactNode;
+  collapsible?: boolean;
+  type?: "single" | "multiple";
+  noArrow?: boolean;
 }
 
 const AccordionDefault: React.FC<DefaultAccordionProps> = ({
@@ -19,11 +20,12 @@ const AccordionDefault: React.FC<DefaultAccordionProps> = ({
   children,
   collapsible = true,
   type = "single",
+  noArrow=false,
 }) => {
   return (
     <Accordion type={type} collapsible={collapsible} className="w-full">
       <AccordionItem value="item-1">
-        <AccordionTrigger>{triggerText}</AccordionTrigger>
+        <AccordionTrigger noArrow={noArrow}>{triggerText}</AccordionTrigger>
         <AccordionContent>{children}</AccordionContent>
       </AccordionItem>
     </Accordion>
