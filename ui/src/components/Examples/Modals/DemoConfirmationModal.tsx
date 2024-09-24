@@ -20,7 +20,7 @@ const DemoConfirmationModal: React.FC = ({}) => {
   return (
     <>
       <Button onClick={handleOpenModal} className="w-full">
-        Abrir Modal de Confirmação
+        Open Confirmation Modal
       </Button>
       {/* Modal é renderizado apenas quando isConfirmationOpen é true */}
       {isConfirmationOpen && (
