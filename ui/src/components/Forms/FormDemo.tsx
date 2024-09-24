@@ -18,9 +18,6 @@ const formSchema = z.object({
 export const ProfileForm: React.FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "test valor padrao",
-    },
   });
   const { toast } = useToast();
 
