@@ -45,12 +45,7 @@ const MyPieChart: React.FC = () => {
             ))}
           </Pie>
           <ChartTooltip content={<ChartTooltipContent />} />
-          <Legend
-            align="center"
-            verticalAlign="bottom"
-            height={36}
-            className=""
-          />
+          <Legend align="center" verticalAlign="bottom" height={36} />
         </PieChart>
       </ChartContainer>
     </ResponsiveContainer>
