@@ -22,74 +22,87 @@ import DemoCarousels from "src/components/Examples/DemoCarousels";
 
 const DemoComponents: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center max-w-[50%] gap-4 ">
-      <div>
-        <Avatar>
-          <AvatarImage src="https://cdn-icons-png.flaticon.com/512/5024/5024509.png" />
-          <AvatarFallback>JS</AvatarFallback>
-        </Avatar>
-      </div>
-      <h1 className="text-5xl text-center font-bold mb-4">Hello,</h1>
-      <p className="text-center text-xl mb-6">
-        Welcome to my component testing environment
-      </p>
-      <Separator />
-      <Accordion triggerText="Toaster">
-        <ButtonDemoToast />
-      </Accordion>
-
-      <Accordion triggerText="Dropdown Menu">
-        <DropDownMenuDemo />
-      </Accordion>
-
-      <Accordion triggerText="Modals">
-        <div className="flex flex-wrap gap-3">
-          <DemoConfirmationModal />
-          <DemoModal />
-          <DialogDemo />
-          <DialogCloseButton />
-          <DialogMenuDemo />
+    <>
+      <div className="flex flex-col justify-center items-center gap-4 ">
+        <div>
+          <Avatar>
+            <AvatarImage src="https://cdn-icons-png.flaticon.com/512/5024/5024509.png" />
+            <AvatarFallback>JS</AvatarFallback>
+          </Avatar>
         </div>
-      </Accordion>
+        <h1 className="text-5xl text-center font-bold mb-4">Hello,</h1>
+        <p className="text-center text-xl mb-6">
+          Welcome to my component testing environment
+        </p>
+      </div>
+      <Separator />
 
-      <Accordion triggerText="Form Switches">
-        <DemoFormSwitches />
-      </Accordion>
+      <div className="flex space-between flex-1 w-full space-x-12 max-w-[80%]">
+        <div className="flex-1 flex flex-col">
+          <Accordion triggerText="Toaster">
+            <ButtonDemoToast />
+          </Accordion>
 
-      <Accordion triggerText="Input">
-        <ProfileForm />
-      </Accordion>
+          <Accordion triggerText="Dropdown Menu">
+            <DropDownMenuDemo />
+          </Accordion>
 
-      <Accordion triggerText="Calendar">
-        <DemoCalendar />
-      </Accordion>
+          <Accordion triggerText="Modals">
+            <div className="flex flex-wrap gap-3">
+              <DemoConfirmationModal />
+              <DemoModal />
+              <DialogDemo />
+              <DialogCloseButton />
+              <DialogMenuDemo />
+            </div>
+          </Accordion>
 
-      <Accordion triggerText="Graphs">
-        <DemoCharts />
-        <Separator className="mt-7 mb-7" />
-        <Label className="text-xl justify-center flex mb-3">
-          Exemplos de Tooltip
-        </Label>
-        <TooltipDemo />
-      </Accordion>
+          <Accordion triggerText="Form Switches">
+            <DemoFormSwitches />
+          </Accordion>
 
-      <Accordion triggerText="Card">
-        <CardDemo />
-      </Accordion>
+          <Accordion triggerText="Input">
+            <ProfileForm />
+          </Accordion>
 
-      <Accordion triggerText="ComboBox Form">
-        <ComboboxForm />
-      </Accordion>
+          <Accordion triggerText="Calendar">
+            <DemoCalendar />
+          </Accordion>
+        </div>
 
-      <Accordion triggerText="Aspect Ratio">
-        <Label>With Aspect Ratio</Label>
-        <AspectRatioDefault />
-      </Accordion>
+        <div className="max-h-full">
+          <Separator orientation="vertical" />
+        </div>
 
-      <Accordion triggerText="Carousels">
-        <DemoCarousels />
-      </Accordion>
-    </div>
+        <div className="flex-1 flex flex-col">
+          <Accordion triggerText="Graphs">
+            <DemoCharts />
+            <Separator className="mt-7 mb-7" />
+            <Label className="text-xl justify-center flex mb-3">
+              Exemplos de Tooltip
+            </Label>
+            <TooltipDemo />
+          </Accordion>
+
+          <Accordion triggerText="Card">
+            <CardDemo />
+          </Accordion>
+
+          <Accordion triggerText="ComboBox Form">
+            <ComboboxForm />
+          </Accordion>
+
+          <Accordion triggerText="Aspect Ratio">
+            <Label>With Aspect Ratio</Label>
+            <AspectRatioDefault />
+          </Accordion>
+
+          <Accordion triggerText="Carousels">
+            <DemoCarousels />
+          </Accordion>
+        </div>
+      </div>
+    </>
   );
 };
 
