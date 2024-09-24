@@ -5,6 +5,16 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
 
 import { cn } from "../../../lib/utils";
+
+export type AccordionSingleProps = AccordionPrimitive.AccordionSingleProps;
+export type AccordionMultipleProps = AccordionPrimitive.AccordionMultipleProps;
+export type AccordionItemProps = AccordionPrimitive.AccordionItemProps;
+export type AccordionHeaderProps = AccordionPrimitive.AccordionHeaderProps;
+export type AccordionContentProps = AccordionPrimitive.AccordionContentProps;
+export type AccordionRootProps = React.ComponentPropsWithoutRef<
+  typeof AccordionPrimitive.Root
+>;
+
 const Accordion = AccordionPrimitive.Root;
 
 const AccordionItem = React.forwardRef<
