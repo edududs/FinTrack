@@ -5,7 +5,16 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselContainerDemo,
 } from "./Carousel";
 
 
-export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi };
+export {
+  Carousel,
+  CarouselContainerDemo,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  type CarouselApi,
+};
