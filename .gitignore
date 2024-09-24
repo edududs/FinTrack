@@ -20,6 +20,8 @@
 
 npm-debug.log*
 yarn-debug.log*
+*yarn.lock*
+/ui/yarn.lock
 yarn-error.log*
 
 # Python
