@@ -1,5 +1,5 @@
 import { Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
-import { chartConfig, chartData } from "../DemoChart";
+import { chartConfig, chartData } from "../DemoCharts";
 
 export const BarLineChartDemo = () => {
     return (
