@@ -6,7 +6,7 @@ const DialogMenuDemo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Dialog>
       <ContextMenu>
-        <ContextMenuTrigger>
+        <ContextMenuTrigger className="w-full">
           <Button className="w-full">Right click here</Button>
         </ContextMenuTrigger>
         <ContextMenuContent>
