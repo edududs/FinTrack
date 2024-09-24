@@ -252,6 +252,28 @@ const CarouselNext = React.forwardRef<
 });
 CarouselNext.displayName = "CarouselNext";
 
+interface CarouselContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactNode;
+  height?: number;
+}
+
+const CarouselContainerDemo = React.forwardRef<
+  HTMLDivElement,
+  CarouselContainerProps
+>(({ children, height = 350, className, ...rest }, ref) => {
+  return (
+    <div
+      ref={ref}
+      className={`flex flex-col items-center justify-center w-[600px] ${className}`}
+      {...rest}
+    >
+      {children}
+    </div>
+  );
+});
+
+CarouselContainerDemo.displayName = "CarouselContainer";
+
 export {
   type CarouselApi,
   Carousel,
@@ -259,4 +281,5 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselContainerDemo,
 };
