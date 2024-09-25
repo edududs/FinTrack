@@ -1,6 +1,6 @@
 import DropdownMenuDemo from "../core/DropdownMenus/DropDownMenuExample";
 import {
-  BaseAccordion,
+  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
@@ -9,14 +9,14 @@ import {
 const DemoDropdownMenu: React.FC = () => {
   return (
     <div className="w-full">
-      <BaseAccordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible accordionClassName="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger>Dropdown Menu</AccordionTrigger>
           <AccordionContent className="flex justify-center">
             <DropdownMenuDemo />
           </AccordionContent>
         </AccordionItem>
-      </BaseAccordion>
+      </Accordion>
     </div>
   );
 };

@@ -11,7 +11,7 @@ import DemoCharts from "./DemoCharts";
 import { Component as TooltipDemo } from "src/components/core/Chart/Tooltip/TooltipDemo";
 import CardDemo from "./DemoCard";
 import DemoCarousels from "./DemoCarousels";
-import { ComboboxForm } from "../core/ComboBox/ComboBoxForm";
+import { ComboboxForm } from "./ComboBox/DemoComboBoxForm";
 import { SingleControllerAccordion } from "../core/Accordion/AccordionDefault";
 import { HoverCardDemo } from "./DemoHoverCard";
 import { TabsDemo } from "./DemoTabs";

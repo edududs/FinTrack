@@ -5,21 +5,16 @@ import {
   ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
-} from "../core/Chart/Chart";
+  Separator,
+} from "../core";
 import {
   Bar,
   CartesianGrid,
-  Cell,
   ComposedChart,
   Line,
-  LineChart,
-  Pie,
-  PieChart,
   XAxis,
   YAxis,
-  PieLabelRenderProps,
 } from "recharts";
-import Separator from "../core/Separator";
 import MyPieChart from "./Charts/MyPieChart";
 import DonutChartDemo from "./Charts/DonutChartDemo";
 import BasicBarChartDemo from "./Charts/BasicBarChartDemo";
@@ -81,69 +76,62 @@ export const chartConfigWithIcons = {
 
 const ComposedLineBarChart: React.FC = () => {
   return (
-    <>
-      <ChartContainer
-        config={chartConfigWithIcons}
-        className="h-[200px] w-full"
-      >
-        <ComposedChart accessibilityLayer data={chartData}>
-          <CartesianGrid />
-          <XAxis
-            dataKey="month"
-            tickLine={false}
-            tickMargin={10}
-            axisLine={false}
-            tickFormatter={(value) => value.slice(0, 3)}
-          />
-          <YAxis axisLine={false} tickLine={false} tickMargin={10} />
-          <ChartTooltip content={<ChartTooltipContent />} />
-          <ChartLegend content={<ChartLegendContent />} />
-          <Bar dataKey="desktop" fill="var(--color-desktop)" />
-          <Line dataKey="mobile" stroke="var(--color-mobile)" type="natural" />
-        </ComposedChart>
-      </ChartContainer>
-    </>
+    <ChartContainer config={chartConfigWithIcons} className="h-[200px] w-full">
+      <ComposedChart accessibilityLayer data={chartData}>
+        <CartesianGrid />
+        <XAxis
+          dataKey="month"
+          tickLine={false}
+          tickMargin={10}
+          axisLine={false}
+          tickFormatter={(value) => value.slice(0, 3)}
+        />
+        <YAxis axisLine={false} tickLine={false} tickMargin={10} />
+        <ChartTooltip content={<ChartTooltipContent />} />
+        <ChartLegend content={<ChartLegendContent />} />
+        <Bar dataKey="desktop" fill="var(--color-desktop)" />
+        <Line dataKey="mobile" stroke="var(--color-mobile)" type="natural" />
+      </ComposedChart>
+    </ChartContainer>
   );
 };
 
 const DemoCharts: React.FC = () => {
   return (
-    <>
-      <div className="mt-10 gap-4">
-        <Label className="text-xl justify-center flex mb-3">
-          Gráfico de Barras
-        </Label>
-        <BasicBarChartDemo chartConfig={chartConfig} chartData={chartData} />
+    <div className="mt-10 gap-4">
+      <Label className="text-xl justify-center flex mb-3">
+        Gráfico de Barras
+      </Label>
+      <BasicBarChartDemo chartConfig={chartConfig} chartData={chartData} />
 
-        <Separator className="mt-7 mb-7" />
+      <Separator className="mt-7 mb-7" />
 
-        <Label className="text-xl justify-center flex mb-3">
-          Gráfico de Linhas
-        </Label>
-        <BasicLineChartDemo chartConfig={chartConfig} chartData={chartData} />
+      <Label className="text-xl justify-center flex mb-3">
+        Gráfico de Linhas
+      </Label>
+      <BasicLineChartDemo chartConfig={chartConfig} chartData={chartData} />
 
-        <Separator className="mt-7 mb-7" />
+      <Separator className="mt-7 mb-7" />
 
-        <Label className="text-xl justify-center flex mb-3">
-          Gráfico Composto
-        </Label>
-        <ComposedLineBarChart />
+      <Label className="text-xl justify-center flex mb-3">
+        Gráfico Composto
+      </Label>
+      <ComposedLineBarChart />
 
-        <Separator className="mt-7 mb-7" />
+      <Separator className="mt-7 mb-7" />
 
-        <Label className="text-xl justify-center flex mb-3">
-          Gráfico de Pizza
-        </Label>
-        <MyPieChart />
+      <Label className="text-xl justify-center flex mb-3">
+        Gráfico de Pizza
+      </Label>
+      <MyPieChart />
 
-        <Separator className="mt-7 mb-7" />
+      <Separator className="mt-7 mb-7" />
 
-        <Label className="text-xl justify-center flex mb-3">
-          Gráfico de Donut
-        </Label>
-        <DonutChartDemo />
-      </div>
-    </>
+      <Label className="text-xl justify-center flex mb-3">
+        Gráfico de Donut
+      </Label>
+      <DonutChartDemo />
+    </div>
   );
 };
 
