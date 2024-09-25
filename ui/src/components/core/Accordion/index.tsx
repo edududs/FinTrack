@@ -1,15 +1,15 @@
 import {
-  Accordion,
+  Accordion as PrimitiveAccordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "./AccordionBase";
-import AccordionDefault from "./AccordionDefault";
+import { AccordionDefault as Accordion } from "./AccordionDefault";
 
 export {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-  AccordionDefault as DefaultAccordion,
+  PrimitiveAccordion as AccordionRoot,
 };
