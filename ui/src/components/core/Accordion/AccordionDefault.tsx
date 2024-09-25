@@ -7,14 +7,23 @@ import {
   AccordionContent,
 } from "./AccordionBase";
 
-interface DefaultSingleAccordionProps {
-  type?: "single";
-  trigger: string | React.ReactNode;
-  children: React.ReactNode;
+import { cn } from "src/lib/utils";
+
+export interface CommonAccordionProps {
+  trigger?: string | React.ReactNode;
+  children?: React.ReactNode;
   collapsible?: boolean;
   noArrow?: boolean;
   disabled?: boolean;
   asChild?: boolean;
+  accordionClassName?: string;
+  contentClassName?: string;
+  triggerClassName?: string;
+  style?: React.CSSProperties;
+}
+
+export interface DefaultSingleAccordionProps extends CommonAccordionProps {
+  type?: "single";
   defaultValue?: string;
   value?: string;
   onValueChange?(value: string): void;
@@ -22,15 +31,10 @@ interface DefaultSingleAccordionProps {
   orientation?: "vertical" | "horizontal";
 }
 
-interface DefaultAccordionProps {
-  trigger?: string | React.ReactNode;
-  children: React.ReactNode;
-  collapsible?: boolean;
+export interface DefaultAccordionProps extends CommonAccordionProps {
   type?: "single" | "multiple";
-  noArrow?: boolean;
-  disabled?: boolean;
-  asChild?: boolean;
 }
+
 export const SingleControllerAccordion: React.FC<
   DefaultSingleAccordionProps
 > = ({
@@ -39,6 +43,7 @@ export const SingleControllerAccordion: React.FC<
   disabled,
   collapsible,
   type = "single",
+  noArrow,
   ...props
 }) => {
   const [value, setValue] = React.useState(props.value ?? props.defaultValue);
@@ -50,7 +55,6 @@ export const SingleControllerAccordion: React.FC<
 
   const handleValueChange = (newValue: string) => {
     if (!disabled) {
-      // Só muda o valor se não estiver desabilitado
       setValue(newValue);
       if (props.onValueChange) {
         props.onValueChange(newValue);
@@ -58,34 +62,40 @@ export const SingleControllerAccordion: React.FC<
     }
   };
 
-  const triggerClass = disabled ? "cursor-not-allowed" : "";
+  const triggerClass = cn(
+    disabled ? "cursor-not-allowed" : "",
+    props.triggerClassName
+  );
 
   return (
     <Accordion
       type="single"
       collapsible={collapsible}
-      className="w-full"
+      className={cn("w-full", props.accordionClassName)}
       value={value}
       onValueChange={handleValueChange}
       {...props}
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger noArrow={props.noArrow} className={triggerClass}>
+        <AccordionTrigger noArrow={noArrow} className={triggerClass}>
           {trigger}
         </AccordionTrigger>
-        <AccordionContent>{children}</AccordionContent>
+        <AccordionContent className={props.contentClassName}>
+          {children}
+        </AccordionContent>
       </AccordionItem>
     </Accordion>
   );
 };
 
-const AccordionDefault: React.FC<DefaultAccordionProps> = ({
+export const AccordionDefault: React.FC<DefaultAccordionProps> = ({
   trigger,
   children,
   collapsible = true,
   type = "single",
   noArrow = false,
   disabled = false,
+  accordionClassName,
   ...props
 }) => {
   return (
@@ -93,17 +103,21 @@ const AccordionDefault: React.FC<DefaultAccordionProps> = ({
       type={type}
       collapsible={collapsible}
       disabled={disabled}
-      className="w-full"
+      className={cn("w-full", accordionClassName)}
       {...props}
     >
       <AccordionItem value="item-1" disabled={disabled}>
-        <AccordionTrigger noArrow={noArrow} disabled={disabled}>
+        <AccordionTrigger
+          noArrow={noArrow}
+          disabled={disabled}
+          className={props.triggerClassName}
+        >
           {trigger}
         </AccordionTrigger>
-        <AccordionContent>{children}</AccordionContent>
+        <AccordionContent className={props.contentClassName}>
+          {children}
+        </AccordionContent>
       </AccordionItem>
     </Accordion>
   );
 };
-
-export default AccordionDefault;
