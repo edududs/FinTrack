@@ -7,7 +7,7 @@ import { z } from "zod";
 
 import { cn } from "src/lib/utils";
 import { useToast } from "src/hooks/use-toast";
-import Button from "../Button";
+import Button from "../../core/Button";
 import {
   Command,
   CommandEmpty,
@@ -15,13 +15,9 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "../Command";
-import Form from "../Forms";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "src/components/core/Popover";
+} from "../../core/Command";
+import Form from "../../core/Forms";
+import { Popover, PopoverContent, PopoverTrigger } from "../../core/Popover";
 
 const { FormField, FormItem, FormLabel, FormDescription, FormMessage } = Form;
 
