@@ -6,7 +6,7 @@ import { DemoModal } from "./Modals/DemoModals";
 const AccordionModais: React.FC = () => {
   return (
     <>
-      <Accordion triggerText="Modais">
+      <Accordion trigger="Modais">
         <div className="w-full flex flex-col gap-3">
           <DemoConfirmationModal />
           <DemoModal />
