@@ -1,31 +1,33 @@
 import React, { useState } from "react";
-import Separator from "../../components/core/Separator";
-import { DemoFormSwitches } from "../../../src/components/Examples/DemoFormSwitches";
-import { ProfileForm } from "../../components/core/Forms/FormDemo";
-import Accordion from "../../components/core/Accordion";
-import ButtonDemoToast from "../../../src/components/Examples/DemoToast";
-import { DemoModal } from "src/components/Examples/Modals/DemoModals";
-import DemoConfirmationModal from "src/components/Examples/Modals/DemoConfirmationModal";
+import {
+  DemoFormSwitches,
+  ButtonDemoToast,
+  TabsDemo,
+  TableDemo,
+  HoverCardDemo,
+  DemoConfirmationModal,
+  DemoModal,
+  DialogDemo,
+  DialogCloseButton,
+  DialogMenuDemo,
+  DemoCalendar,
+  DemoCharts,
+  CardDemo,
+  DemoCarousels,
+} from "src/components/Examples";
+import { ProfileForm } from "src/components/core/Forms/FormDemo";
 import DropDownMenuDemo from "src/components/core/DropdownMenus/DropDownMenuExample";
-import DemoCalendar from "src/components/Examples/DemoCalendar";
-import { DialogDemo } from "src/components/Examples/DemoDialog";
-import { DialogCloseButton } from "src/components/Examples/DemoDialogShare";
-import DialogMenuDemo from "src/components/Examples/DemoDialogMenu";
-import DemoCharts from "src/components/Examples/DemoCharts";
 import { Component as TooltipDemo } from "src/components/core/Chart/Tooltip/TooltipDemo";
-import { Label } from "src/components/core/Label";
-import CardDemo from "src/components/Examples/DemoCard";
-import { ComboboxForm } from "src/components/core/ComboBox/ComboBoxForm";
+import { ComboboxForm } from "src/components/Examples/ComboBox/DemoComboBoxForm";
 import { AspectRatioDefault } from "src/components/core/AspectRatio/AspectRatioDemo";
 import {
   AvatarImage,
   Avatar,
   AvatarFallback,
-} from "src/components/core/Avatar";
-import DemoCarousels from "src/components/Examples/DemoCarousels";
-import { AdaptiveTooltip } from "src/components/core/Tooltip";
-import Button from "src/components/core/Button";
-import {
+  Separator,
+  Accordion,
+  Label,
+  AdaptiveTooltip,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -33,10 +35,69 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "src/components/core/Dialog";
+  Button,
+} from "src/components/core";
 import { SingleControllerAccordion } from "src/components/core/Accordion/AccordionDefault";
-import { HoverCardDemo } from "src/components/Examples/DemoHoverCard";
-import { TabsDemo } from "src/components/Examples/DemoTabs";
+
+// Função que renderiza cada Accordion e seus conteúdos
+const renderAccordion = (title: string, content: JSX.Element) => (
+  <Accordion trigger={title}>{content}</Accordion>
+);
+
+// Lista com os dados dos componentes e seus títulos
+const accordionLeftColumnData = [
+  { title: "Toaster", content: <ButtonDemoToast /> },
+  { title: "Dropdown Menu", content: <DropDownMenuDemo /> },
+  {
+    title: "Modals",
+    content: (
+      <div className="flex flex-wrap gap-3">
+        <DemoConfirmationModal />
+        <DemoModal />
+        <DialogDemo />
+        <DialogCloseButton />
+        <DialogMenuDemo />
+      </div>
+    ),
+  },
+  { title: "Form Switches", content: <DemoFormSwitches /> },
+  { title: "Input", content: <ProfileForm /> },
+  { title: "Tabs", content: <TabsDemo /> },
+  { title: "Graphs", content: <DemoCharts /> },
+];
+
+const accordionRightColumnData = [
+  {
+    title: "Graphs",
+    content: (
+      <>
+        <DemoCharts />
+        <Separator className="mt-7 mb-7" />
+        <Label className="text-xl justify-center flex mb-3">
+          Exemplos de Tooltip
+        </Label>
+        <TooltipDemo />
+      </>
+    ),
+  },
+  { title: "Card", content: <CardDemo /> },
+  { title: "ComboBox Form", content: <ComboboxForm /> },
+  { title: "Aspect Ratio", content: <AspectRatioDefault /> },
+  { title: "Carousels", content: <DemoCarousels /> },
+  { title: "Hover Card", content: <HoverCardDemo /> },
+  {
+    title: "Tables",
+    content: (
+      <>
+        {renderAccordion("Simple Table", <TableDemo />)}
+        {renderAccordion(
+          "Data Table",
+          <>Conteúdo que irei criar do datatable</>
+        )}
+      </>
+    ),
+  },
+];
 
 const DemoComponents: React.FC = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -64,31 +125,10 @@ const DemoComponents: React.FC = () => {
 
       <div className="flex space-between flex-1 w-full space-x-12 max-w-[80%]">
         <div className="flex-1 flex flex-col">
-          <Accordion trigger="Toaster">
-            <ButtonDemoToast />
-          </Accordion>
-
-          <Accordion trigger="Dropdown Menu">
-            <DropDownMenuDemo />
-          </Accordion>
-
-          <Accordion trigger="Modals">
-            <div className="flex flex-wrap gap-3">
-              <DemoConfirmationModal />
-              <DemoModal />
-              <DialogDemo />
-              <DialogCloseButton />
-              <DialogMenuDemo />
-            </div>
-          </Accordion>
-
-          <Accordion trigger="Form Switches">
-            <DemoFormSwitches />
-          </Accordion>
-
-          <Accordion trigger="Input">
-            <ProfileForm />
-          </Accordion>
+          {/* Map que gera os accordions dinamicamente */}
+          {accordionLeftColumnData.map(({ title, content }, index) =>
+            renderAccordion(title, content)
+          )}
 
           <AdaptiveTooltip
             content="Disabled for technical reasons"
@@ -129,10 +169,6 @@ const DemoComponents: React.FC = () => {
               </Dialog>
             </div>
           </AdaptiveTooltip>
-
-          <Accordion trigger="Tabs">
-            <TabsDemo />
-          </Accordion>
         </div>
 
         <div className="max-h-full">
@@ -140,35 +176,9 @@ const DemoComponents: React.FC = () => {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <Accordion trigger="Graphs">
-            <DemoCharts />
-            <Separator className="mt-7 mb-7" />
-            <Label className="text-xl justify-center flex mb-3">
-              Exemplos de Tooltip
-            </Label>
-            <TooltipDemo />
-          </Accordion>
-
-          <Accordion trigger="Card">
-            <CardDemo />
-          </Accordion>
-
-          <Accordion trigger="ComboBox Form">
-            <ComboboxForm />
-          </Accordion>
-
-          <Accordion trigger="Aspect Ratio">
-            <Label>With Aspect Ratio</Label>
-            <AspectRatioDefault />
-          </Accordion>
-
-          <Accordion trigger="Carousels">
-            <DemoCarousels />
-          </Accordion>
-
-          <Accordion trigger="Hover Card">
-            <HoverCardDemo />
-          </Accordion>
+          {accordionRightColumnData.map(({ title, content }) =>
+            renderAccordion(title, content)
+          )}
         </div>
       </div>
     </>
