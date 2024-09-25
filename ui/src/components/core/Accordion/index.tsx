@@ -1,5 +1,5 @@
 import {
-  Accordion as BaseAccordion,
+  Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
@@ -7,12 +7,9 @@ import {
 import AccordionDefault from "./AccordionDefault";
 
 export {
-  BaseAccordion,
+  Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
   AccordionDefault as DefaultAccordion,
 };
-
-const Accordion = AccordionDefault;
-export default Accordion;
