@@ -31,7 +31,7 @@ export const DialogDemo: React.FC<{ className?: string }> = ({ className }) => {
             </Label>
             <Input
               id="name"
-              defaultValue="Pedro Duarte"
+              defaultValue="Eduardo Lima"
               className="col-span-3"
             />
           </div>
