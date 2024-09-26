@@ -38,6 +38,7 @@ import {
   Button,
 } from "src/components/core";
 import { SingleControllerAccordion } from "src/components/core/Accordion/AccordionDefault";
+import { DataTableDemo } from "src/components/Examples/Table/DataTable/DataTableDemo";
 
 // Função que renderiza cada Accordion e seus conteúdos
 const renderAccordion = (title: string, content: JSX.Element) => (
@@ -63,7 +64,6 @@ const accordionLeftColumnData = [
   { title: "Form Switches", content: <DemoFormSwitches /> },
   { title: "Input", content: <ProfileForm /> },
   { title: "Tabs", content: <TabsDemo /> },
-  { title: "Graphs", content: <DemoCharts /> },
 ];
 
 const accordionRightColumnData = [
@@ -90,10 +90,7 @@ const accordionRightColumnData = [
     content: (
       <>
         {renderAccordion("Simple Table", <TableDemo />)}
-        {renderAccordion(
-          "Data Table",
-          <>Conteúdo que irei criar do datatable</>
-        )}
+        {renderAccordion("Data Table", <DataTableDemo />)}
       </>
     ),
   },
