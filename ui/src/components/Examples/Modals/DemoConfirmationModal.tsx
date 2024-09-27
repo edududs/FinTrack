@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../core/Button";
 import ModalConfirmDemo from "./CoreComponents/ConfirmationModal";
 
-const DemoConfirmationModal: React.FC = ({}) => {
+const DemoConfirmationModal: React.FC = () => {
   // Estado para controlar o modal
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 

@@ -15,14 +15,16 @@ import {
   CardDemo,
   DemoCarousels,
   SheetSideDemo,
+  DemoToastSonner,
   RadioGroupForm,
+  DataTableDemo,
+  AspectRatioDefault,
+  ComboboxForm,
+  DropDownMenuDemo,
+  ProfileForm,
+  TooltipDemo,
+  ProgressDemo,
 } from "src/components/Examples";
-
-import { ProfileForm } from "src/components/core/Forms/FormDemo";
-import DropDownMenuDemo from "src/components/core/DropdownMenus/DropDownMenuExample";
-import { Component as TooltipDemo } from "src/components/core/Chart/Tooltip/TooltipDemo";
-import { ComboboxForm } from "src/components/Examples/ComboBox/DemoComboBoxForm";
-import { AspectRatioDefault } from "src/components/core/AspectRatio/AspectRatioDemo";
 import {
   AvatarImage,
   Avatar,
@@ -43,10 +45,8 @@ import {
   Slider,
   Skeleton,
   CommonSheet,
+  SingleControllerAccordion,
 } from "src/components/core";
-import { SingleControllerAccordion } from "src/components/core/Accordion/AccordionDefault";
-import { DataTableDemo } from "src/components/Examples/Table/DataTable/DataTableDemo";
-import { DemoToastSonner } from "src/components/Examples/DemoToastSonner";
 
 // Função que renderiza cada Accordion e seus conteúdos
 const renderAccordion = (title: string, content: JSX.Element) => (
@@ -124,6 +124,7 @@ const accordionLeftColumnData = [
     ),
   },
   { title: "Radio Group Form", content: <RadioGroupForm /> },
+  { title: "Progress", content: <ProgressDemo /> },
 ];
 
 const accordionRightColumnData = [
@@ -180,14 +181,7 @@ const accordionRightColumnData = [
   {
     title: "Slider",
     content: (
-
-        <Slider
-          defaultValue={[50]}
-          max={100}
-          step={0.1}
-          className="p-3"
-        />
-
+      <Slider defaultValue={[50]} max={100} step={0.1} className="p-3" />
     ),
   },
 ];
@@ -199,8 +193,6 @@ const DemoComponents: React.FC = () => {
   const closeDialog = () => {
     setIsDialogOpen(false);
   };
-
-  
 
   return (
     <>

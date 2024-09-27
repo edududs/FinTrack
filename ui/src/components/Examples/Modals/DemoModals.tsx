@@ -20,7 +20,7 @@ export const DemoModal: React.FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export const DemoConfirmationModal: React.FC = ({}) => {
+export const DemoConfirmationModal: React.FC = () => {
   // Estado para controlar o modal
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 

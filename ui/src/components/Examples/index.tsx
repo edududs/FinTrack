@@ -39,6 +39,9 @@ export * from "./DemoDialogShare";
 export * from "./Modals/DemoModals";
 export * from "./DemoToast";
 export * from "./DemoTabs";
+export * from "./DemoProgress";
+export * from "./DemoToastSonner";
+export * from "./Table/DataTable";
 
 
 export {
