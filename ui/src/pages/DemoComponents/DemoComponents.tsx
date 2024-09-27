@@ -14,6 +14,7 @@ import {
   DemoCharts,
   CardDemo,
   DemoCarousels,
+  SheetSideDemo,
 } from "src/components/Examples";
 import { ProfileForm } from "src/components/core/Forms/FormDemo";
 import DropDownMenuDemo from "src/components/core/DropdownMenus/DropDownMenuExample";
@@ -25,7 +26,7 @@ import {
   Avatar,
   AvatarFallback,
   Separator,
-  Accordion,
+  AccordionDefault as Accordion,
   Label,
   AdaptiveTooltip,
   Dialog,
@@ -36,9 +37,14 @@ import {
   DialogTitle,
   DialogTrigger,
   Button,
+  Input,
+  Slider,
+  Skeleton,
+  CommonSheet,
 } from "src/components/core";
 import { SingleControllerAccordion } from "src/components/core/Accordion/AccordionDefault";
 import { DataTableDemo } from "src/components/Examples/Table/DataTable/DataTableDemo";
+import { DemoToastSonner } from "src/components/Examples/DemoToastSonner";
 
 // Função que renderiza cada Accordion e seus conteúdos
 const renderAccordion = (title: string, content: JSX.Element) => (
@@ -47,7 +53,15 @@ const renderAccordion = (title: string, content: JSX.Element) => (
 
 // Lista com os dados dos componentes e seus títulos
 const accordionLeftColumnData = [
-  { title: "Toaster", content: <ButtonDemoToast /> },
+  {
+    title: "Toaster",
+    content: (
+      <div className="flex gap-2 justify-center items-center">
+        <ButtonDemoToast />
+        <DemoToastSonner />
+      </div>
+    ),
+  },
   { title: "Dropdown Menu", content: <DropDownMenuDemo /> },
   {
     title: "Modals",
@@ -64,6 +78,49 @@ const accordionLeftColumnData = [
   { title: "Form Switches", content: <DemoFormSwitches /> },
   { title: "Input", content: <ProfileForm /> },
   { title: "Tabs", content: <TabsDemo /> },
+  {
+    title: "Sheets",
+    content: (
+      <>
+        <div className="mb-2">
+          <SheetSideDemo />
+        </div>
+        <div className="w-full justify-center flex">
+          <div className="text-center text-xl w-[99%]">
+            <CommonSheet
+              trigger={
+                <Button variant="outline" className="w-full">
+                  Customized
+                </Button>
+              }
+              triggerClassName="w-[90%]"
+              title="Edit Profile"
+              description="Customize your profile settings."
+            >
+              <div className="grid gap-4 py-4">
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="name" className="text-right">
+                    Name
+                  </Label>
+                  <Input id="name" value="John Doe" className="col-span-3" />
+                </div>
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="username" className="text-right">
+                    Username
+                  </Label>
+                  <Input
+                    id="username"
+                    value="@johndoe"
+                    className="col-span-3"
+                  />
+                </div>
+              </div>
+            </CommonSheet>
+          </div>
+        </div>
+      </>
+    ),
+  },
 ];
 
 const accordionRightColumnData = [
@@ -94,6 +151,42 @@ const accordionRightColumnData = [
       </>
     ),
   },
+  {
+    title: "Skeleton",
+    content: (
+      <>
+        <div className="flex items-center space-x-4">
+          <Skeleton className="h-12 w-12 rounded-full bg-gray-200" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px] bg-gray-200" />
+            <Skeleton className="h-4 w-[200px] bg-gray-200" />
+          </div>
+        </div>
+        <Separator className="mt-7 mb-7" />
+        <Label className="text-lg flex mb-3">Card</Label>
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl bg-gray-200" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px] bg-gray-200" />
+            <Skeleton className="h-4 w-[200px] bg-gray-200" />
+          </div>
+        </div>
+      </>
+    ),
+  },
+  {
+    title: "Slider",
+    content: (
+
+        <Slider
+          defaultValue={[50]}
+          max={100}
+          step={0.1}
+          className="p-3"
+        />
+
+    ),
+  },
 ];
 
 const DemoComponents: React.FC = () => {
@@ -103,6 +196,8 @@ const DemoComponents: React.FC = () => {
   const closeDialog = () => {
     setIsDialogOpen(false);
   };
+
+  
 
   return (
     <>

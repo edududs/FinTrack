@@ -69,6 +69,8 @@ const data: Payment[] = [
   },
 ];
 
+
+
 export type Payment = {
   id: string;
   amount: number;
