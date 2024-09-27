@@ -10,12 +10,14 @@ import {
   DialogDemo,
   DialogCloseButton,
   DialogMenuDemo,
-  DemoCalendar,
+  DemoCalendarForm,
   DemoCharts,
   CardDemo,
   DemoCarousels,
   SheetSideDemo,
+  RadioGroupForm,
 } from "src/components/Examples";
+
 import { ProfileForm } from "src/components/core/Forms/FormDemo";
 import DropDownMenuDemo from "src/components/core/DropdownMenus/DropDownMenuExample";
 import { Component as TooltipDemo } from "src/components/core/Chart/Tooltip/TooltipDemo";
@@ -121,6 +123,7 @@ const accordionLeftColumnData = [
       </>
     ),
   },
+  { title: "Radio Group Form", content: <RadioGroupForm /> },
 ];
 
 const accordionRightColumnData = [
@@ -237,7 +240,7 @@ const DemoComponents: React.FC = () => {
                     collapsible
                     disabled
                   >
-                    <DemoCalendar />
+                    <DemoCalendarForm />
                   </SingleControllerAccordion>
                 </DialogTrigger>
 

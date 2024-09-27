@@ -16,7 +16,7 @@ import {
   DialogTrigger,
 } from "../core/Dialog";
 
-const DialogMenuDemo: React.FC<{ className?: string }> = ({ className }) => {
+export const DialogMenuDemo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Dialog>
       <ContextMenu>
@@ -51,4 +51,3 @@ const DialogMenuDemo: React.FC<{ className?: string }> = ({ className }) => {
   );
 };
 
-export default DialogMenuDemo;

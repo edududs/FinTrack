@@ -96,7 +96,7 @@ const ComposedLineBarChart: React.FC = () => {
   );
 };
 
-const DemoCharts: React.FC = () => {
+export const DemoCharts: React.FC = () => {
   return (
     <div className="mt-10 gap-4">
       <Label className="text-xl justify-center flex mb-3">
@@ -134,5 +134,3 @@ const DemoCharts: React.FC = () => {
     </div>
   );
 };
-
-export default DemoCharts;

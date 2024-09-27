@@ -8,7 +8,7 @@ import {
   CarouselDApiDemo,
 } from "./Carousel/CarouselDemo";
 
-const DemoCarousels: React.FC = () => {
+export const DemoCarousels: React.FC = () => {
   return (
     <div>
       <Label className="text-xl justify-center flex mb-3">
@@ -45,4 +45,3 @@ const DemoCarousels: React.FC = () => {
   );
 };
 
-export default DemoCarousels;

@@ -2,7 +2,7 @@ import Button from "../core/Button";
 import { useToast } from "../../../src/hooks/use-toast";
 import { ToastAction } from "../core/Toast/Toast";
 
-const ButtonDemoToast: React.FC = () => {
+export const ButtonDemoToast: React.FC = () => {
   const { toast } = useToast();
   return (
     <Button
@@ -29,4 +29,4 @@ const ButtonDemoToast: React.FC = () => {
   );
 };
 
-export default ButtonDemoToast;
+
