@@ -33,3 +33,8 @@ export * from "./Tags";
 export * from "./Textarea";
 export * from "./Toast";
 export * from "./Tooltip";
+export * from "./ScrollArea";
+export * from "./Sheet";
+export * from "./Skeleton";
+export * from "./Slider";
+export * from "./ToastSooner";

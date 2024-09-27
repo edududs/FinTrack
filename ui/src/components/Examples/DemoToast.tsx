@@ -12,7 +12,6 @@ const ButtonDemoToast: React.FC = () => {
         toast({
           title: "Toast Title",
           description: "Toast Description",
-          timeout: 5000,
           action: (
             <ToastAction
               altText="Desfazer"
@@ -21,6 +20,7 @@ const ButtonDemoToast: React.FC = () => {
               Desfazer
             </ToastAction>
           ),
+          duration: 1000,
         })
       }
     >

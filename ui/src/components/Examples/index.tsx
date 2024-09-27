@@ -36,6 +36,7 @@ import {
   Label,
   Separator,
 } from "src/components/core";
+export * from "./DemoSheets";
 
 export {
   Accordion,
