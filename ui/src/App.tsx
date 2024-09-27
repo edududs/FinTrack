@@ -2,6 +2,7 @@ import { NavBar } from "./components/core/NavBar";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "./components/core/Toast/Toaster";
+import { SonnerToaster } from "./components/core/ToastSooner";
 
 // Componentes vazios para ilustrar
 const Projects = () => <div>Projects Page</div>;
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <NavBar />
       <Toaster />
+      <SonnerToaster />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
