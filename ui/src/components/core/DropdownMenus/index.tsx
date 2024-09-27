@@ -1,43 +1,10 @@
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuCheckboxItem,
-  DropdownMenuRadioItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuGroup,
-  DropdownMenuPortal,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuRadioGroup,
-} from "./DropDownMenu";
-import  DropdownMenuDemo  from "./DropDownMenuExample";
-import DropdownMenuCheckboxes from "./DropDownCheckBoxes";
-import { DropdownMenuRadioGroupDemo } from "./DropDownRadius";
+export * from "./DropDownMenu";
+export * from "./DropDownMenuExample";
+export * from "./DropDownCheckBoxes";
+export * from "./DropDownRadius";
 
-const DropDown = {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuCheckboxItem,
-  DropdownMenuRadioItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuGroup,
-  DropdownMenuPortal,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuRadioGroup,
-  DropdownMenuDemo,
-  DropdownMenuCheckboxes,
-  DropdownMenuRadioGroupDemo,
-};
+//   DropdownMenuCheckboxes,
+//   DropdownMenuRadioGroupDemo,
+// };
 
-export default DropDown;
+// export default DropDown;
