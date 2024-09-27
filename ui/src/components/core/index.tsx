@@ -38,3 +38,4 @@ export * from "./Sheet";
 export * from "./Skeleton";
 export * from "./Slider";
 export * from "./ToastSooner";
+export * from "./Progress";
