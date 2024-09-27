@@ -27,7 +27,7 @@ const FormSchema = z.object({
   }),
 });
 
-export function CalendarForm() {
+export function DemoCalendarForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -96,4 +96,3 @@ export function CalendarForm() {
   );
 }
 
-export default CalendarForm;
