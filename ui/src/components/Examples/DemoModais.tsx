@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion } from "../core";
+import { AccordionDefault as Accordion } from "../core";
 import DemoConfirmationModal from "./Modals/DemoConfirmationModal";
 import { DemoModal } from "./Modals/DemoModals";
 

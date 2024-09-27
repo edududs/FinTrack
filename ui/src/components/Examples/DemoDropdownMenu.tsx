@@ -1,6 +1,6 @@
 import DropdownMenuDemo from "../core/DropdownMenus/DropDownMenuExample";
 import {
-  Accordion,
+  AccordionDefault as Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
